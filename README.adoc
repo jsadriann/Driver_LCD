@@ -1,0 +1,8 @@
+:repository-owner: driver_lcd_i2c
+:repository-name: driver_lcd_i2c
+
+= {repository-name} Library for ESP32 = 
+
+Essa biblioteca foi criada para controlar um display lcd i2c para ser usando na disciplina de sistemas embarcados.
+Para melhorar a produtividade utilizei a LiquidCrystal_I2C, localizado em https://docs.arduino.cc/libraries/liquidcrystal-i2c/#Releases
+versão 1.1.1

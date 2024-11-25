@@ -1,0 +1,63 @@
+\doxysection{driver\+\_\+lcd\+\_\+i2c.\+h}
+\hypertarget{driver__lcd__i2c_8h_source}{}\label{driver__lcd__i2c_8h_source}\mbox{\hyperlink{driver__lcd__i2c_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ DRIVER\_LCD\_I2C\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ DRIVER\_LCD\_I2C\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}LiquidCrystal\_I2C.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classDriverLCD__I2C}{DriverLCD\_I2C}}\ \{}
+\DoxyCodeLine{00007\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00008\ \ \ \ \ LiquidCrystal\_I2C\ lcd;\ \ \textcolor{comment}{//\ Instância\ da\ classe\ LiquidCrystal\_I2C\ para\ encapsular\ as\ funções\ do\ LCD.}}
+\DoxyCodeLine{00009\ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ uint8\_t\ \_lcdAddr;\ \ \textcolor{comment}{//\ Endereço\ I2C\ do\ display.}}
+\DoxyCodeLine{00011\ \ \ \ \ uint8\_t\ \_lcdCols;\ \ \textcolor{comment}{//\ Número\ de\ colunas\ do\ display.}}
+\DoxyCodeLine{00012\ \ \ \ \ uint8\_t\ \_lcdRows;\ \ \textcolor{comment}{//\ Número\ de\ linhas\ do\ display.}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ uint8\_t\ \_cursorCol;\ \textcolor{comment}{//\ Coluna\ atual\ do\ cursor.}}
+\DoxyCodeLine{00015\ \ \ \ \ uint8\_t\ \_cursorRow;\ \textcolor{comment}{//\ Linha\ atual\ do\ cursor.}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Enum\ class\ para\ os\ modos\ do\ LCD}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}{Modo}}\{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800ae1ba155a9f2e8c3be94020eef32a0301}{Manual}},}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800a0ab98e419db3f54bb05af5796254ce53}{Automatico}},}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800a29ae3083fffbc85b66152cd4f92aa817}{Ensaio}}}
+\DoxyCodeLine{00024\ \ \ \ \ \};}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classDriverLCD__I2C_a25ca0d1d6da649d382289f333a31280f}{DriverLCD\_I2C}}(uint8\_t\ lcd\_Addr,\ uint8\_t\ lcd\_cols,\ uint8\_t\ lcd\_rows);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Destruidor}}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classDriverLCD__I2C_a05fe58e4e58c4c4f9ca9224e14570768}{\string~DriverLCD\_I2C}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00054\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classDriverLCD__I2C_a102de2a4255ef3cd9e98e1bbe81bd0a4}{getCursorCol}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{classDriverLCD__I2C_a4c727dd0429cb428597b0fc74fdadece}{getCursorRow}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_ad8f7cf250f3ae1c4f30b6413c2205fa6}{setCursorCol}}(uint8\_t\ col);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_ad6661605b7b05f0a0fafea2a359c6699}{setCursorRow}}(uint8\_t\ row);}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_adbbb9414fb1089354dfd79286e8fed1a}{postAngle}}(\textcolor{keywordtype}{float}\ angle);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a29364c8625f7a7d8bd6a143507a9334e}{postTofRight}}(\textcolor{keywordtype}{float}\ distance);}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a5e87bf22312f982f083915b3271e7716}{postTofLeft}}(\textcolor{keywordtype}{float}\ distance);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a44eab620a12670fb7a4d98ae7318920c}{postAccelerometer}}(\textcolor{keywordtype}{float}\ acceleration);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a95b906354c8dba57f2c68fa37dccf9a6}{postSetPoint}}(\textcolor{keywordtype}{float}\ angle);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_af0ef6ce3948a7179ff201a8df936b4f4}{postOperatingMode}}(\mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}{Modo}}\ modo);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a6d3e5665b54c82c9b4ce0812a758750f}{postConsumption}}(\textcolor{keywordtype}{float}\ voltage,\ \textcolor{keywordtype}{float}\ current,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ voltageUnit,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ currentUnit);}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a78aefda72e697c6ffbba549fad7e503f}{dashboardLightOn}}();}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a3011b8c7946aa62df27c40c2b26009ca}{dashboardLightOff}}();}
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a52849d28935f18ed247b3acfe3653f87}{clear}}();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classDriverLCD__I2C_a8320a39cf4bbda9b3fc9c07468233c65}{clearLine}}(uint8\_t\ line);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ DRIVER\_LCD\_I2C\_H}}
+
+\end{DoxyCode}

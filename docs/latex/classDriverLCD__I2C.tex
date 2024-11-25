@@ -1,0 +1,353 @@
+\doxysection{Driver\+LCD\+\_\+\+I2C Class Reference}
+\hypertarget{classDriverLCD__I2C}{}\label{classDriverLCD__I2C}\index{DriverLCD\_I2C@{DriverLCD\_I2C}}
+
+
+{\ttfamily \#include $<$driver\+\_\+lcd\+\_\+i2c.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}{Modo}} \{ \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800ae1ba155a9f2e8c3be94020eef32a0301}{Manual}}
+, \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800a0ab98e419db3f54bb05af5796254ce53}{Automatico}}
+, \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800a29ae3083fffbc85b66152cd4f92aa817}{Ensaio}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDriverLCD__I2C_a25ca0d1d6da649d382289f333a31280f}{Driver\+LCD\+\_\+\+I2C}} (uint8\+\_\+t lcd\+\_\+\+Addr, uint8\+\_\+t lcd\+\_\+cols, uint8\+\_\+t lcd\+\_\+rows)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classDriverLCD__I2C}{Driver\+LCD\+\_\+\+I2C}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDriverLCD__I2C_a05fe58e4e58c4c4f9ca9224e14570768}{\texorpdfstring{$\sim$}{\string~}\+Driver\+LCD\+\_\+\+I2C}} ()
+\begin{DoxyCompactList}\small\item\em Destruidor da classe \doxylink{classDriverLCD__I2C}{Driver\+LCD\+\_\+\+I2C}. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classDriverLCD__I2C_a102de2a4255ef3cd9e98e1bbe81bd0a4}{get\+Cursor\+Col}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a coluna atual do cursor no LCD. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{classDriverLCD__I2C_a4c727dd0429cb428597b0fc74fdadece}{get\+Cursor\+Row}} () const
+\begin{DoxyCompactList}\small\item\em Obtém a linha atual do cursor no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_ad8f7cf250f3ae1c4f30b6413c2205fa6}{set\+Cursor\+Col}} (uint8\+\_\+t col)
+\begin{DoxyCompactList}\small\item\em Define a coluna do cursor no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_ad6661605b7b05f0a0fafea2a359c6699}{set\+Cursor\+Row}} (uint8\+\_\+t row)
+\begin{DoxyCompactList}\small\item\em Define a linha do cursor no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_adbbb9414fb1089354dfd79286e8fed1a}{post\+Angle}} (float angle)
+\begin{DoxyCompactList}\small\item\em Exibe o valor do ângulo no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a29364c8625f7a7d8bd6a143507a9334e}{post\+Tof\+Right}} (float distance)
+\begin{DoxyCompactList}\small\item\em Exibe a distância medida pelo sensor TOF da direita no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a5e87bf22312f982f083915b3271e7716}{post\+Tof\+Left}} (float distance)
+\begin{DoxyCompactList}\small\item\em Exibe a distância medida pelo sensor TOF da esquerda no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a44eab620a12670fb7a4d98ae7318920c}{post\+Accelerometer}} (float acceleration)
+\begin{DoxyCompactList}\small\item\em Exibe o valor da aceleração no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a95b906354c8dba57f2c68fa37dccf9a6}{post\+Set\+Point}} (float angle)
+\begin{DoxyCompactList}\small\item\em Exibe o ponto de ajuste (setpoint) no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_af0ef6ce3948a7179ff201a8df936b4f4}{post\+Operating\+Mode}} (\mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}{Modo}} modo)
+\begin{DoxyCompactList}\small\item\em Exibe o modo operacional no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a6d3e5665b54c82c9b4ce0812a758750f}{post\+Consumption}} (float voltage, float current, const char \texorpdfstring{$\ast$}{*}voltage\+Unit, const char \texorpdfstring{$\ast$}{*}current\+Unit)
+\begin{DoxyCompactList}\small\item\em Exibe a medição de consumo de energia no LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a78aefda72e697c6ffbba549fad7e503f}{dashboard\+Light\+On}} ()
+\begin{DoxyCompactList}\small\item\em Desliga o retroiluminamento do LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a3011b8c7946aa62df27c40c2b26009ca}{dashboard\+Light\+Off}} ()
+\begin{DoxyCompactList}\small\item\em Liga o retroiluminamento do LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a52849d28935f18ed247b3acfe3653f87}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Limpa a tela do LCD. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDriverLCD__I2C_a8320a39cf4bbda9b3fc9c07468233c65}{clear\+Line}} (uint8\+\_\+t line)
+\begin{DoxyCompactList}\small\item\em Limpa uma linha específica do LCD. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!Modo@{Modo}}
+\index{Modo@{Modo}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{Modo}{Modo}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800} 
+enum class \mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}{Driver\+LCD\+\_\+\+I2\+C\+::\+Modo}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Manual@{Manual}!DriverLCD\_I2C@{DriverLCD\_I2C}}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!Manual@{Manual}}}\Hypertarget{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800ae1ba155a9f2e8c3be94020eef32a0301}\label{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800} 
+Manual&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Automatico@{Automatico}!DriverLCD\_I2C@{DriverLCD\_I2C}}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!Automatico@{Automatico}}}\Hypertarget{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800a0ab98e419db3f54bb05af5796254ce53}\label{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800} 
+Automatico&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ensaio@{Ensaio}!DriverLCD\_I2C@{DriverLCD\_I2C}}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!Ensaio@{Ensaio}}}\Hypertarget{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800a29ae3083fffbc85b66152cd4f92aa817}\label{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800} 
+Ensaio&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDriverLCD__I2C_a25ca0d1d6da649d382289f333a31280f}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\index{DriverLCD\_I2C@{DriverLCD\_I2C}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{DriverLCD\_I2C()}{DriverLCD\_I2C()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a25ca0d1d6da649d382289f333a31280f} 
+Driver\+LCD\+\_\+\+I2\+C\+::\+Driver\+LCD\+\_\+\+I2C (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{lcd\+\_\+\+Addr}{, }\item[{uint8\+\_\+t}]{lcd\+\_\+cols}{, }\item[{uint8\+\_\+t}]{lcd\+\_\+rows}{}\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{classDriverLCD__I2C}{Driver\+LCD\+\_\+\+I2C}. 
+
+Este construtor inicializa o display LCD I2C com o endereço especificado, número de colunas e linhas. Além disso, configura o cursor inicial e limpa o display após a inicialização.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lcd\+\_\+\+Addr} & Endereço I2C do display LCD. \\
+\hline
+{\em lcd\+\_\+cols} & Número de colunas do display LCD. \\
+\hline
+{\em lcd\+\_\+rows} & Número de linhas do display LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_a05fe58e4e58c4c4f9ca9224e14570768}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!````~DriverLCD\_I2C@{\texorpdfstring{$\sim$}{\string~}DriverLCD\_I2C}}
+\index{````~DriverLCD\_I2C@{\texorpdfstring{$\sim$}{\string~}DriverLCD\_I2C}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DriverLCD\_I2C()}{\string~DriverLCD\_I2C()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a05fe58e4e58c4c4f9ca9224e14570768} 
+Driver\+LCD\+\_\+\+I2\+C\+::\texorpdfstring{$\sim$}{\string~}\+Driver\+LCD\+\_\+\+I2C (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruidor da classe \doxylink{classDriverLCD__I2C}{Driver\+LCD\+\_\+\+I2C}. 
+
+Este destruidor é responsável por liberar quaisquer recursos alocados durante o uso da classe \doxylink{classDriverLCD__I2C}{Driver\+LCD\+\_\+\+I2C}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDriverLCD__I2C_a52849d28935f18ed247b3acfe3653f87}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!clear@{clear}}
+\index{clear@{clear}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a52849d28935f18ed247b3acfe3653f87} 
+void Driver\+LCD\+\_\+\+I2\+C\+::clear (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Limpa a tela do LCD. 
+
+Este método limpa a tela do LCD e reposiciona o cursor no início. \Hypertarget{classDriverLCD__I2C_a8320a39cf4bbda9b3fc9c07468233c65}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!clearLine@{clearLine}}
+\index{clearLine@{clearLine}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{clearLine()}{clearLine()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a8320a39cf4bbda9b3fc9c07468233c65} 
+void Driver\+LCD\+\_\+\+I2\+C\+::clear\+Line (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{line}{}\end{DoxyParamCaption})}
+
+
+
+Limpa uma linha específica do LCD. 
+
+Este método limpa uma linha específica do LCD, e muda o cursor para a linha line e coluna 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & A linha que deve ser limpa. O valor deve estar entre 0 e o número máximo de linhas do LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_a3011b8c7946aa62df27c40c2b26009ca}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!dashboardLightOff@{dashboardLightOff}}
+\index{dashboardLightOff@{dashboardLightOff}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{dashboardLightOff()}{dashboardLightOff()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a3011b8c7946aa62df27c40c2b26009ca} 
+void Driver\+LCD\+\_\+\+I2\+C\+::dashboard\+Light\+Off (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Liga o retroiluminamento do LCD. 
+
+Este método liga o retroiluminamento do LCD. \Hypertarget{classDriverLCD__I2C_a78aefda72e697c6ffbba549fad7e503f}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!dashboardLightOn@{dashboardLightOn}}
+\index{dashboardLightOn@{dashboardLightOn}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{dashboardLightOn()}{dashboardLightOn()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a78aefda72e697c6ffbba549fad7e503f} 
+void Driver\+LCD\+\_\+\+I2\+C\+::dashboard\+Light\+On (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Desliga o retroiluminamento do LCD. 
+
+Este método desliga o retroiluminamento do LCD. \Hypertarget{classDriverLCD__I2C_a102de2a4255ef3cd9e98e1bbe81bd0a4}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!getCursorCol@{getCursorCol}}
+\index{getCursorCol@{getCursorCol}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{getCursorCol()}{getCursorCol()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a102de2a4255ef3cd9e98e1bbe81bd0a4} 
+uint8\+\_\+t Driver\+LCD\+\_\+\+I2\+C\+::get\+Cursor\+Col (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém a coluna atual do cursor no LCD. 
+
+Este método retorna o valor da coluna onde o cursor está atualmente posicionado no display LCD.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t A coluna atual do cursor. 
+\end{DoxyReturn}
+\Hypertarget{classDriverLCD__I2C_a4c727dd0429cb428597b0fc74fdadece}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!getCursorRow@{getCursorRow}}
+\index{getCursorRow@{getCursorRow}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{getCursorRow()}{getCursorRow()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a4c727dd0429cb428597b0fc74fdadece} 
+uint8\+\_\+t Driver\+LCD\+\_\+\+I2\+C\+::get\+Cursor\+Row (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém a linha atual do cursor no LCD. 
+
+Este método retorna o valor da linha onde o cursor está atualmente posicionado no display LCD.
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t A linha atual do cursor. 
+\end{DoxyReturn}
+\Hypertarget{classDriverLCD__I2C_a44eab620a12670fb7a4d98ae7318920c}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postAccelerometer@{postAccelerometer}}
+\index{postAccelerometer@{postAccelerometer}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postAccelerometer()}{postAccelerometer()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a44eab620a12670fb7a4d98ae7318920c} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Accelerometer (\begin{DoxyParamCaption}\item[{float}]{acceleration}{}\end{DoxyParamCaption})}
+
+
+
+Exibe o valor da aceleração no LCD. 
+
+Este método exibe o valor da aceleração no LCD. A string "{}\+Acceleration\+: "{} é seguida pelo valor da aceleração formatado com 2 casas decimais. Se o valor não couber na linha, ele é centralizado na tela, dividindo em duas linhas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em acceleration} & O valor da aceleração a ser exibido no LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_adbbb9414fb1089354dfd79286e8fed1a}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postAngle@{postAngle}}
+\index{postAngle@{postAngle}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postAngle()}{postAngle()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_adbbb9414fb1089354dfd79286e8fed1a} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Angle (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})}
+
+
+
+Exibe o valor do ângulo no LCD. 
+
+Este método exibe o valor do ângulo no LCD. A string "{}\+Angle\+: "{} é seguida pelo valor do ângulo formatado com 2 casas decimais. Se o valor não couber na linha, ele é centralizado na tela, dividindo em duas linhas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & O valor do ângulo a ser exibido no LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_a6d3e5665b54c82c9b4ce0812a758750f}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postConsumption@{postConsumption}}
+\index{postConsumption@{postConsumption}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postConsumption()}{postConsumption()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a6d3e5665b54c82c9b4ce0812a758750f} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Consumption (\begin{DoxyParamCaption}\item[{float}]{voltage}{, }\item[{float}]{current}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{voltage\+Unit}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{current\+Unit}{}\end{DoxyParamCaption})}
+
+
+
+Exibe a medição de consumo de energia no LCD. 
+
+Este método exibe a medição de consumo de energia no LCD. A string "{}\+Consumption\+:"{} é seguida pela voltagem e corrente, com o respectivo símbolo de unidade. Se a mensagem não couber, o número de casas decimais é reduzido para 2.
+
+
+\begin{DoxyParams}{Parameters}
+{\em voltage} & A voltagem medida a ser exibida no LCD. \\
+\hline
+{\em current} & A corrente medida a ser exibida no LCD. \\
+\hline
+{\em voltage\+Unit} & A unidade de voltagem a ser exibida. \\
+\hline
+{\em current\+Unit} & A unidade de corrente a ser exibida. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_af0ef6ce3948a7179ff201a8df936b4f4}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postOperatingMode@{postOperatingMode}}
+\index{postOperatingMode@{postOperatingMode}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postOperatingMode()}{postOperatingMode()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_af0ef6ce3948a7179ff201a8df936b4f4} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Operating\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classDriverLCD__I2C_a42cb28a38a0930141025b6c5505db800}{Modo}}}]{modo}{}\end{DoxyParamCaption})}
+
+
+
+Exibe o modo operacional no LCD. 
+
+Este método exibe o modo operacional no LCD, centralizando a mensagem na tela. Pode ser um dos três modos\+: Manual, Automático, ou Ensaio.
+
+
+\begin{DoxyParams}{Parameters}
+{\em modo} & O modo a ser exibido no LCD (Manual, Automático ou Ensaio). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_a95b906354c8dba57f2c68fa37dccf9a6}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postSetPoint@{postSetPoint}}
+\index{postSetPoint@{postSetPoint}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postSetPoint()}{postSetPoint()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a95b906354c8dba57f2c68fa37dccf9a6} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Set\+Point (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})}
+
+
+
+Exibe o ponto de ajuste (setpoint) no LCD. 
+
+Este método exibe o valor do ponto de ajuste no LCD. A string "{}\+Set\+Point\+: "{} é seguida pelo valor do ponto de ajuste formatado com 2 casas decimais. Se o valor não couber na linha, ele é centralizado na tela, dividindo em duas linhas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & O valor do ponto de ajuste a ser exibido no LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_a5e87bf22312f982f083915b3271e7716}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postTofLeft@{postTofLeft}}
+\index{postTofLeft@{postTofLeft}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postTofLeft()}{postTofLeft()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a5e87bf22312f982f083915b3271e7716} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Tof\+Left (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Exibe a distância medida pelo sensor TOF da esquerda no LCD. 
+
+Este método exibe o valor da distância do sensor TOF da esquerda no LCD. A string "{}\+TOF Left\+: "{} é seguida pelo valor da distância formatado com 2 casas decimais. Se o valor não couber na linha, ele é centralizado na tela, dividindo em duas linhas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & O valor da distância a ser exibido no LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_a29364c8625f7a7d8bd6a143507a9334e}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!postTofRight@{postTofRight}}
+\index{postTofRight@{postTofRight}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{postTofRight()}{postTofRight()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_a29364c8625f7a7d8bd6a143507a9334e} 
+void Driver\+LCD\+\_\+\+I2\+C\+::post\+Tof\+Right (\begin{DoxyParamCaption}\item[{float}]{distance}{}\end{DoxyParamCaption})}
+
+
+
+Exibe a distância medida pelo sensor TOF da direita no LCD. 
+
+Este método exibe o valor da distância do sensor TOF da direita no LCD. A string "{}\+TOF Right\+: "{} é seguida pelo valor da distância formatado com 2 casas decimais. Se o valor não couber na linha, ele é centralizado na tela, dividindo em duas linhas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em distance} & O valor da distância a ser exibido no LCD. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_ad8f7cf250f3ae1c4f30b6413c2205fa6}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!setCursorCol@{setCursorCol}}
+\index{setCursorCol@{setCursorCol}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{setCursorCol()}{setCursorCol()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_ad8f7cf250f3ae1c4f30b6413c2205fa6} 
+void Driver\+LCD\+\_\+\+I2\+C\+::set\+Cursor\+Col (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{col}{}\end{DoxyParamCaption})}
+
+
+
+Define a coluna do cursor no LCD. 
+
+Este método define a coluna onde o cursor será posicionado no LCD. O valor fornecido deve estar dentro do limite de colunas do LCD.
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & A coluna onde o cursor será posicionado (de 0 a \+\_\+lcd\+Cols-\/1). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classDriverLCD__I2C_ad6661605b7b05f0a0fafea2a359c6699}\index{DriverLCD\_I2C@{DriverLCD\_I2C}!setCursorRow@{setCursorRow}}
+\index{setCursorRow@{setCursorRow}!DriverLCD\_I2C@{DriverLCD\_I2C}}
+\doxysubsubsection{\texorpdfstring{setCursorRow()}{setCursorRow()}}
+{\footnotesize\ttfamily \label{classDriverLCD__I2C_ad6661605b7b05f0a0fafea2a359c6699} 
+void Driver\+LCD\+\_\+\+I2\+C\+::set\+Cursor\+Row (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{row}{}\end{DoxyParamCaption})}
+
+
+
+Define a linha do cursor no LCD. 
+
+Este método define a linha onde o cursor será posicionado no LCD. O valor fornecido deve estar dentro do limite de linhas do LCD.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & A linha onde o cursor será posicionado (de 0 a \+\_\+lcd\+Rows-\/1). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{driver__lcd__i2c_8h}{driver\+\_\+lcd\+\_\+i2c.\+h}}\item 
+\mbox{\hyperlink{driver__lcd__i2c_8cpp}{driver\+\_\+lcd\+\_\+i2c.\+cpp}}\end{DoxyCompactItemize}
